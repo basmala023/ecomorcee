@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="/assets/images/freshcart-logo.svg" alt=""></a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+               
+                <li *ngIf="isLogin" class="nav-item">
+                    <a class="nav-link" routerLink="home">home</a>
+                </li>
+                <li *ngIf="isLogin" class="nav-item">
+                    <a class="nav-link"routerLink="cart">cart</a>
+                </li>
+                <li  *ngIf="isLogin" class="nav-item">
+                    <a class="nav-link"routerLink="products">products</a>
+                </li>
+                <li *ngIf="isLogin" class="nav-item">
+                    <a class="nav-link"routerLink="categories">categries</a>
+                </li>
+                <li *ngIf="isLogin" class="nav-item">
+                    <a class="nav-link"routerLink="barnds">brands</a>
+                </li>
+             
+            </ul>
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+               
+                <li class="nav-item d-flex align-items-center">
+                    <i class="bi bi-instagram mx-2"></i>
+                    <i class="bi bi-facebook mx-2"></i>
+                    <i class="bi bi-twitter"></i>         
+                    <i class="bi bi-linkedin mx-2"></i>
+                    <i class="bi bi-tiktok mx-2"></i>
+                    <i class="bi bi-youtube mx-2"></i>
+                </li>
+                <li *ngIf="!isLogin" class="nav-item">
+                    <a class="nav-link" routerLink="login">login</a>
+                </li>
+                <li *ngIf="!isLogin" class="nav-item">
+                    <a class="nav-link" routerLink="register">register</a>
+                </li>
+                <li *ngIf="isLogin" class="nav-item">
+                    <a (click)="logout()" class="nav-link cursor-pointer" href="#">signout</a>
+                </li>
+             
+             
+            </ul>
+           
+        </div>
+  </div>
+</nav>
+
